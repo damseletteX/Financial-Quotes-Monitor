@@ -1,7 +1,7 @@
-PRAGMA FOREIGN
+PRAGMA foreign_key = ON;
 
 CREATE TABLE users (
-    /*user_id INTEGER UNIQUE NOT NULL,*/
+    user_id INTEGER PRIMARY KEY,
     username TEXT UNIQUE NOT NULL,
     pass_hash TEXT NOT NULL
 );
@@ -12,5 +12,3 @@ CREATE TABLE quotes(
     upper_boundary FLOAT NOT NULL,
 
 );
-
-CREATE INDEX user_id ON users(username);
