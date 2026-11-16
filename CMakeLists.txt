@@ -9,3 +9,5 @@ target_include_directories(sqlite3 PUBLIC third_party/sqlite)
 
 add_executable(quote_monitor src/main.cpp)
 target_link_libraries(quote_monitor PRIVATE sqlite3)
+target_precompile_headers(quote_monitor PRIVATE
+    <string> <vector> <iostream> <sqlite3.h>)

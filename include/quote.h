@@ -7,6 +7,7 @@ class Quote{
     std::string tokenName;
     
     public:
+        Quote(std::string name, long double price_) : tokenName(name), price(price_) {};
         void parsePrice();
         long double getPrice();  
 };
